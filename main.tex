@@ -1,0 +1,88 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{subfiles}
+\usepackage{geometry}
+\geometry{margin=1.2in}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{cases}
+\usepackage{color}
+\usepackage{empheq}
+\usepackage[english]{babel}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{epstopdf}
+\usepackage{pdfpages}
+\usepackage{xr}
+\usepackage{fancyhdr}
+\usepackage{float}
+\usepackage{gensymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{ifthen}
+\usepackage{listings}
+\usepackage[version=4]{mhchem}% e.g. \ce{Ca2+}
+% \nmusepackage[miktex]{gnuplottex}
+\usepackage{subcaption}
+\usepackage{subfiles}
+\usepackage[]{algorithm2e}
+\usepackage{cleveref}
+\usepackage{bm}
+\usepackage{blindtext}
+\usepackage{soul}
+\usepackage{epigraph}
+\DeclareMathOperator{\EX}{\mathbb{E}}% expected value
+\DeclareMathOperator*{\argmax}{arg\,max} 
+\DeclareMathOperator*{\argmin}{arg\,min}
+\usepackage{enumitem}
+\usepackage{adjustbox}
+\usepackage[utf8]{inputenc}
+\usepackage{subfig}
+% \usepackage{natbib}
+% \bibliographystyle{dinat}
+
+\usepackage[
+backend=biber,
+style=alphabetic,
+sorting=ynt
+]{biblatex}
+\addbibresource{mybibliography.bib}
+
+
+
+\title{
+Neuromorphic Engineering 1\\
+Lecture notes from Fall 2021}
+\author{Authors:\\\\ 
+Lioba Schürmann\\
+Yassine Taoudi Benchekroun}
+\date{December 2021}
+
+\begin{document}
+
+\maketitle
+
+\newpage
+\subfile{Preliminary Notes/Disclaimer.tex}
+\subfile{Preliminary Notes/Organisation.tex}
+\subfile{Preliminary Notes/Contact.tex}
+
+\newpage
+\tableofcontents
+
+\newpage
+\subfile{Chapters/Chapter 0: Fundamentals/Main Chapter 0.tex}
+\subfile{Chapters/Chapter 1: Introduction/Neuromorphic Engineering: History, objectives and challenges.tex}
+\subfile{Chapters/Chapter 2: The transistor/Main Chapter 2.tex}
+\subfile{Chapters/Chapter 3: Above and Below Threshold/Main Chapter 3.tex}
+\subfile{Chapters/Chapter 4: Static Circuits/Main Chapter 4.tex}
+\subfile{Chapters/Chapter 5: The Transconductance Amplifier/Main Chapter 5.tex}
+\subfile{Chapters/Chapter 6: Linear Systems/Main Chapter 6.tex}
+\subfile{Chapters/Chapter 7: Current Mode and Winner Take All/Main Chapter 7.tex}
+\subfile{Chapters/Chapter 8: Photosensors and Circuits/Main Chapter 8.tex}
+\subfile{Chapters/Appendix/Main_Appendix.tex}
+
+
+\printbibliography
+\end{document}

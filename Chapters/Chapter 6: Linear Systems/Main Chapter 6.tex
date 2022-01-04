@@ -1,0 +1,28 @@
+\newpage
+\section{Linear Systems Theory}
+
+This chapter will be some kind of exception to the rest of the chapters. Indeed, most of the Linear Systems' lecture covers basic of "Signals and Systems" - a field of its own, in order to properly introduce circuit response, steady state analysis and capacitive circuits which include time constants. When I attempted to write an exhaustive summary for this chapter, I realized four important things, which led me to organize the chapter the way I did: 
+
+\begin{enumerate}
+    \item It is simply impossible for anyone to understand the concepts introduced (delta function, convolution etc...) from only the introduction that was given in class. Signals and Systems is a paradigm of analysis on its own, and grasping the fundamentals properly takes, well, a lot of time. I took a whole course on this topic in my undergraduate degree and I still struggle to get the intuition behind convolution. Maybe I'm stupid. 
+    \item There is no way for me to explain the basics of Signal and Systems without spending the whole a whole month reviewing the topic on my own in order to find good analogies and ways of explaining it to the unitiated. 
+    \item Even if I did that, I'd never (in my wildest dreams) manage to do anything better than Alan V. Oppenhein in his classic textbook "Signals and Systems". \footnote{Here is a link to the PDF version: \url{https://eee.guc.edu.eg/Courses/Communications/COMM401\%20Signal\%20&\%20System\%20Theory/Alan\%20V.\%20Oppenheim,\%20Alan\%20S.\%20Willsky,\%20with\%20S.\%20Hamid-Signals\%20and\%20Systems-Prentice\%20Hall\%20(1996).pdf}}
+    \item Last, and clearly not least, we are not required to know anything beyond Resistor-Capacitor circuit analysis (transfer functions etc..), which only require basic knowledge of how Laplace Transforms work.
+\end{enumerate}
+
+I have thus decided to only cover the topics I mentionned in my last argument, that is: 1) a brief overview of exponential and Laplace Transforms and 2) full derivations of Resistor-Capacitor circuits transfer functions and dynamics. I have also included in the appendix the full textbook chapter on Linear Circuits, which may serve as a reminder or point of reference for those who wish to verify some details. This chapter is very well written (for whoever has learnt about Signals and Systems before), and I wouldn't want to spend a whole day simply rewriting word for word what's already written there. Again, if you don't know what Signals and Sytems Theory is all about, you have two options: 1) Don't worry about it, you will be just fine with what I write about; 2) go read the first two chapters of the Alan Oppenheim textbook I mentioned above. If you choose 2), you have my respect, for whatever it's worth.   
+
+Here are things you should be comfortable with before starting to read through this chapter: 
+\begin{itemize}
+    \item Basics of electronic circuits, which is all reviewed in chapter 0
+    \item Complex exponential basic mathematics.  
+    \item Architecture, function and application of the transconductance amplifier.
+\end{itemize}
+
+SOMETHING IMPORTANT IS MISSING IN THE CHAPTER, MAINLY THAT I AM NOT EXPLAINING WHY IT'S CALLED INTEGRATOR AND DIFFERENTIATORS.
+
+
+\subfile{Preliminary To RC Circuits.tex}
+\subfile{RC Circuits.tex}
+\subfile{VLSI Integrators And Differentiators.tex}
+\subfile{Test Yourself.tex}

@@ -1,0 +1,22 @@
+\section{Current Mode and Winner Take All}
+
+Current mode happens to be a relatively new thing in circuit design, and a process of its own . This is particularly true in analog design where historically, information is \textit{represented by voltage} at nodes of circuits. In current mode, its just the opposite. Without entering the details of the reason for such a switch which are complicated and beyond the scope of this module, it is found that current-mode circuits can operate at low power-supply voltages and over a wide range of currents. Their advantages include higher bandwidth, higher dynamic range, and they are more amenable to lower power
+supplies There are whole textbooks that have been written on only the topic of CMOS current mode operation. Thanks to current mode circuits, we really have managed to shring power supply: in the 90s we're talking 5V power supply for a chip, today you have start of the art implementation with a few milivolts as power supply, which is not a lot. There are now a wide range of different circuits both in academia and industry using current mode circuits. 
+
+Long story short, we switch from having inputs, outputs and parameters as voltages to having them as currents, and it happens to be better as it needs less power and some other advantages that I sadly not fully understand yet. 
+
+What you should be comfortable with before starting to read through this chapter: 
+
+\begin{itemize}
+    \item Current Source
+\end{itemize}
+
+
+
+\subfile{Translinear_Principle.tex}
+\subfile{Resistive_Networks.tex}
+\subfile{Current_Conveyor.tex}
+\subfile{Current_Multiplier.tex}
+\subfile{Gilbert_Normalizer.tex}
+\subfile{Winner_Take_All.tex}
+\subfile{Test Yourself.tex}

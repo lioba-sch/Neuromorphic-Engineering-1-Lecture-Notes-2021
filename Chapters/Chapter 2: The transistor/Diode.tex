@@ -1,0 +1,22 @@
+\subsection{Understanding the PN junction and the Diode}
+
+Most explanations and graphics for this section are taken or inspired from the two brilliant explanation from \emph{The Organic Chemistry Tutor} Youtube Video "What is a Diode", and \emph{The Engineering Mindset} Video "Diodes Explained". I apologize for the very ugly and huge figure (which we'll call figure X) in the page below, but trust me, it will make a lot of important things clear. The precise dynamics of what I am explaining could be studied over a whole semester, but understanding the basic idea is enough for what's needed from us in the exam. If you want more, refer to the textbook \cite{liu2002analog}, which will point you to appropriate electrostatics and semiconductor textbooks. \\
+
+So, let's start. You might have heard of diodes before NE1 - they are semi-conductive devices that allow current to flow in one direction only. Ever heard of LEDs? Yes, they're diodes: Light Emitting Diodes. \\
+
+Diodes are drawn in circuits as shown on figure X.A. Current flows in the direction of the arrow, which means that electrons flow in the opposite direction (thanks again Benjamin Franklin). The "wall" at the tip of the arrow is there to remind you that current really only flows in one direction.   \\
+
+So how does it do it? How does it allow current to flow only in one direction? \\
+
+Diodes are essentially \textbf{PN Junctions}. A PN junction is what happens when you put P-Type doped semi conductor next to N-Type doped semi conductor (usually silicon). As shown in Figure X.B. the P-Type semi-conductor is known as the anode, and the N-type to an cathode. \\
+
+What happens when you stick P-Type and N-Type semi-conductors together? \\
+
+This is the purpose of Figure X.C. As you already know, and as you can see in X.C.1, the P-Type is filled with holes and the N-Type is filled with electrons. The junction between the two is what we call the \textit{PN Junction}. X.C.1 only shows you what you theoretically expect, but of course, as soon as you actually stick the two bits together, things start happening, which are shown in X.C.2-4. The first thing to consider is that some of the excess electrons from the N-Type move over to the P-type side to occupy some holes. This occurs in the \textit{depletion region} that you see in X.C.2. This causes some of the initially P-Type region to become slightly negatively charged and the N-type region to become slightly positively charged (X.C.3). This creates an \textit{electric field}, which prevents further electrons from moving across (X.C.3). It also happens that in typical diodes, made of silicon, the potential difference between the slightly positive and slightly negative region is $\approx$ 0.7 Volts. \\
+
+\includepdf[pages=-]{../../Figures/Diodes.pdf}
+
+Now what happens when you connect a voltage source to the diode? \\
+
+This is the purpose of figure D. If you connect the anode (P-type) to the positive end of your voltage source, and the cathode (N-type) to the negative end, you'll get (if the potential difference on your battery is $>$ 0.7V) a nice current flowing in \textbf{forward bias mode} (X.D.1). Alternatively, if you reverse the power supply, for reasons that very clear on X.D.2, the holes are pulled towards the negative and electrons towards the positive, which causes the barrier to expand and (almost) no current to flow: we're in \textbf{reverse bias mode}. Yes, the barrier is similar to the band gaps we talked about before - and this is why in reverse bias mode, the diode acts as an insulator. We now know how diodes only allow current to flow in one direction. Pretty cool right? Now a bit more details, which are shown in X.D.3: current really starts flowing when you apply a voltage (in the right mode) superior to some "forward potential barrier", which in the case of silicon is $\approx$ 0.7V. From then, current flows. Now when we apply a voltage in reverse bias mode, you can see on X.D.3 that the current flow is not exactly 0 (because it really never is anyways). If you apply a strong enough voltage in reverse bias (remember, voltage on Kryptonite), you eventually will force a current, and probably damage your diode by the same occasion (just like Superman would break the wall and not simply go through it). In general, you always have both a forward and reverse current component, that's just how electron dynamics work, though depending on the voltage you apply, one is several orders of magnitude more important than the other, which is why we often neglect it. 
+
