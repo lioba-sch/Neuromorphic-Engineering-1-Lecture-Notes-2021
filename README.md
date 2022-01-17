@@ -1,5 +1,3 @@
-# Neuromorphic-Engineering-1-Lecture-Notes-2021
-
 # Neuromorphic Engineering 1 - Lecture Notes
 #### Student Notes of the Fall 2021 by Prof. Shi-Chii Liu, Prof. Tobi Delbruck & Prof. Giacomo Indiveri  ETHZ
 
