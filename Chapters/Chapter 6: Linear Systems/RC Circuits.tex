@@ -1,4 +1,4 @@
-\subsection{Resistor-Capacitor Circuits}
+\subsection{Resistor-Capacitor Circuits}\label{sec:resistor_capcitor_circuits}
 
 \begin{figure}[H]
     \centering
@@ -39,9 +39,9 @@ Now we can rearrange and essentially obtain a differential equation (remembering
     j \omega \cdot RC u_{out} + u_{out} = u_{in} \equiv RC\frac{du_{out}}{dt} + u_{out} = u_{in}
 \end{equation}
 
-You may wonder what this is all about, and why am I even doing this. I wondered myself, but don't worry, we'll get to it. It's all about transfer functions and understanding how the system out changes with respect to input change.
+You may wonder what this is all about, and why am I even doing this. I wondered myself, but don't worry, we'll get to it. It's all about transfer functions and understanding how the system output changes with respect to input change.
 
-One important thing, $RC$ has now appeared. As you can see, it is a constant (assuming resistance and capacitance are constant in a circuit) that scales the rate of change out the output with respect to time. This is called the time constant and is noted $\tau$ . This is critically important to understand charging and discharging time of capacitors (see Figure \ref{fig:Time_Constant}.The formal definition is: The circuit's time constant $\tau = RC$ is the time required to discharge the capacitor, through the resistor, to 36.8\% (1/e) of its final steady state value.
+One important thing, $RC$ has now appeared. As you can see, it is a constant (assuming resistance and capacitance are constant in a circuit) that scales the rate of change of the output with respect to time. This is called the time constant and is noted $\tau$ . This is critically important to understand charging and discharging time of capacitors (see Figure \ref{fig:Time_Constant}.The formal definition is: The circuit's time constant $\tau = RC$ is the time required to discharge the capacitor, through the resistor, to 36.8\% (1/e) of its final steady state value.
 
 \begin{figure}[H]
     \centering
@@ -146,7 +146,7 @@ Now let's look at a plot which really demonstrates how the response (output) of 
 \end{figure}
 
 
-The RC circuit of figure \ref{fig:RC_Circuits}.a, because it allows sinusoidal
+The RC circuit of figure \ref{fig:RC_Circuits}.a allows sinusoidal
 signals with frequencies lower than the cutoff frequency to pass virtually
 unchanged. On the other hand, the frequency components of the input signals
 that are above the cutoff frequency are attenuated. The phase lag between the
@@ -162,11 +162,11 @@ with increasing frequency.
 \paragraph{Summary about filters}
 \begin{itemize}
     \item The figures we've just shown are for RC Low-Pass filters. The amplitude and power of the output signal decreases for high frequencies. 
-    \item The time constant $\tau = RC$ determines what high and low frequencies are, it also determines the cutoff frequency (at which out power is halved)
+    \item The time constant $\tau = RC$ determines what high and low frequencies are, it also determines the cutoff frequency (at which output power is halved)
     \item Cutoff frequency $\omega_{cutoff} = \frac{1}{RC}$
-    \item CR circuit (figure \ref{fig:RC_Circuits}.b), is a high pass filter, which is just the same as we've shown but in reverese: it passes high frequencies and reduces low frequency. 
+    \item CR circuit (figure \ref{fig:RC_Circuits}.b), is a high pass filter, which is just the same as we've shown but in reverse: it passes high frequencies and reduces low frequency. 
     \item You can build a \textit{band pass} filter from combining a high pass and low pass filter: the low pass will reduce all frequencies higher than your max desired frequency and the high pass will reduce all frequencies lower than your min desired frequency. 
-    \item Why is this even useful? Imagine you're trying to process sound, like music for example, where you have some high frequency noise that is not your music (you barely hear it but it's there an alters your recording). Would be great if you could filter that out right? And only keep the frequencies of sound that are actually coming from the music (between ~10 and 3000 Hz). This is just one dumb example on the top of my mind of why filtering is useful, and we'll see in the next section applications in Neuromorphic Engineering. 
+    \item Why is this even useful? Imagine you're trying to process sound, like music for example, where you have some high frequency noise that is not your music (you barely hear it but it's there and alters your recording). Would be great if you could filter that out right? And only keep the frequencies of sound that are actually coming from the music (between ~10 and 3000 Hz). This is just one dumb example on the top of my mind of why filtering is useful, and we'll see in the next section applications in Neuromorphic Engineering. 
 \end{itemize}
 
 

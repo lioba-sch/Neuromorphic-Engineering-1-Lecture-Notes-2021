@@ -6,7 +6,7 @@ Before we start on explaining the translinear principle, let's touchbase on what
 
 So a translinear circuit is a circuit that uses translinear circuit elements: MOSFETs operating in subthreshold (or BJT\footnote{Bipolar Junction Transistors (BJT) are another type of transistors which we don't really discuss in this course but are very popular in many applications.}) and hence in the exponential current voltage relation. 
 
-\subsubsection{Translinear principle}
+\subsubsection{Translinear principle}\label{sec:translinear_principle}
 
 Static tranlinear circuits were invented by the late Barrie Gilbert, and there is actually a whole lecture on Youtube where he explains what this is all about \footnote{\url{https://www.youtube.com/watch?v=LQNJVtcFrCc}}. Let's write the formal definition: \textit{"In a closed loop containing an even number of forwardbiased junctions arranged so that there are an equal number of clockwise-facing and counter clock-wise facing polarities, the product of the current densities in the clockwise direction is equal to the product o the current densities in the counter clock-wise direction."}. This actually is best visualized by looking at a simple circuit (as opposed to the weird one shown in lecture notes):
 
@@ -18,7 +18,7 @@ Static tranlinear circuits were invented by the late Barrie Gilbert, and there i
     \label{fig:Translinear Principle}
 \end{figure}
 
-Consider figure \ref{fig:Translinear Principle}.A, you can see that there is an equal amount of clockwise facine and counter clockwise facing polarities BJTs \footnote{Yes, the images are shown with BJTs rather than MOSFETs. Don't worry too much about it.}. Remember Kirchoff's current law? (\textit{In any complete loop within a circuit, the sum of all voltages across components which supply electrical energy (such as cells or generators) must equal the sum of all voltages across the other components in the same loop.}). We can apply that to figure \ref{fig:Translinear Principle}.A (and B as well for the matter, and let's just focus on B because of the notation) and observe that the voltage around the loop that goes from $V_{1}$ to $V_{N}$ must be 0. In other words, the voltage drops must equal the voltage increases. We call this a translinear loop. Mathematically, this becomes
+Consider figure \ref{fig:Translinear Principle}.A, you can see that there is an equal amount of clockwise facing and counter clockwise facing polarities BJTs \footnote{Yes, the images are shown with BJTs rather than MOSFETs. Don't worry too much about it.}. Remember Kirchoff's current law? (\textit{In any complete loop within a circuit, the sum of all voltages across components which supply electrical energy (such as cells or generators) must equal the sum of all voltages across the other components in the same loop.}). We can apply that to figure \ref{fig:Translinear Principle}.A (and B as well for the matter, and let's just focus on B because of the notation) and observe that the voltage around the loop that goes from $V_{1}$ to $V_{N}$ must be 0. In other words, the voltage drops must equal the voltage increases. We call this a translinear loop. Mathematically, this becomes
 
 \begin{equation}
     \sum_{k=1}^{N} V_{F_K} = 0

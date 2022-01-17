@@ -12,7 +12,7 @@ Let's first start with, as always, some assumptions and consequent observations.
     \item $M_4$ and $M_5$ are also in saturation. We can therefore apply the P-Type current mirror equation reached previously. 
 \end{itemize}
 
-Now let's see what we can reach with this. We noted previously that our current mirror had a unity gain, this means that $I_1 + I_2$ flows out of $M_5$ (as $I_1$ adds up to $I_2$ which flows in that branch through $M_2$). Using Kirchoff's current law, we can now establish that: $I_{out} = I_1 - I_2$. If we take the expression derived in the assumptions for $I_1$ and $I_2$, we reach with some tedious algebra: 
+Now let's see what we can reach with this. We noted previously that our current mirror had a unity gain, this means that $I_1$ flows through $M_5$ (since it is mirroring the current of $M4$). Using Kirchoff's current law, we can now establish that: $I_{out} = I_1 - I_2$. If we take the expression derived in the assumptions for $I_1$ and $I_2$, we reach with some tedious algebra: 
 
 \begin{equation}
     I_{out} = I_1 - I_2 = I_b\frac{e^{\frac{\kappa V_1}{U_T}} - e^{\frac{\kappa V_2}{U_T}}}{e^{\frac{\kappa V_1}{U_T}} + e^{\frac{\kappa V_2}{U_T}}} = I_b \mathrm{tanh}(\frac{\kappa (V_1 - V_2)}{2U_T}) 
@@ -110,19 +110,19 @@ Yes, all of this, just to know what kind of voltage we have to apply to $V1$, $V
 
 \paragraph{But what about the other Transistors?}
 
-Before we move on, let's have a last look at the assumptions. So we just managed to derive the specific conditions to satisfy to ensure that $M_3$ operates in saturation. We, unfortunately, have to consider the saturation conditions for the other transistors as well. For practical purposes, $M1$ and $M3$ will always be in saturation because $M3$ is \textit{diode-connected} and the drain of $M1$ is thus at a high voltage (THIS IS WORD TO WORD WHAT IS WRITTEN IN THE TEXTBOOK, BUT SHOULDN'T IT BE LOW VOLTAGE?). Now we need to look at $M_2$ and $M_5$. So for these we're gonna have to work on it a bit. 
+Before we move on, let's have a last look at the assumptions. So we just managed to derive the specific conditions to satisfy to ensure that $M_3$ operates in saturation. We, unfortunately, have to consider the saturation conditions for the other transistors as well. For practical purposes, $M_1$ and $M_4$ will always be in saturation because $M_4$ is \textit{diode-connected} and the drain of $M_1$ is thus at a high voltage (THIS IS WORD TO WORD WHAT IS WRITTEN IN THE TEXTBOOK, BUT SHOULDN'T IT BE LOW VOLTAGE?). Now we need to look at $M_2$ and $M_5$. So for these we're gonna have to work on it a bit. 
 \begin{itemize}
     \item To keep $M_5$ in saturation, we need $V_{dd}$ - $V_{out} > 4 U_T$
     \item To keep $M_2$ in saturation, we need $V_{out}$ - $V_{s} > 4 U_T \equiv V_{out} > 4 U_T +  V_S$. We've just found $V_S$ before, so let's use that, and we get
     \begin{equation}
         V_{out} > \kappa (\mathrm{max}(V_1, V_2) - V_b) + 4 U_T
     \end{equation}
-    Huh... That's annoying. Our $V_out$ also need to satisfy some condition which depends on $V_1$, $V_2$ and $V_b$. This is called the min problem, because we manage to get in saturation only if the \textit{minimum} $V_out$ is greater than the condition above. And well, before we kinda also reached a min problem where we had saturation only if $|V_1 - V_2|$ was higher than $V_b + 4U_T/ \kappa$. So you see that to get this circuit operated properly, you need to satisfy a lot of different things, which in practice are absolutely not trivial to satisfy. 
+    Huh... That's annoying. Our $V_{out}$ also need to satisfy some condition which depends on $V_1$, $V_2$ and $V_b$. This is called the min problem, because we manage to get in saturation only if the \textit{minimum} $V_{out}$ is greater than the condition above. And well, before we kinda also reached a min problem where we had saturation only if $|V_1 - V_2|$ was higher than $V_b + 4U_T/ \kappa$. So you see that to get this circuit operated properly, you need to satisfy a lot of different things, which in practice are absolutely not trivial to satisfy. 
     \item So how does this circuit work in practice? To be honest I am not sure myself and wouldn't mind having your input on it :). 
 \end{itemize}
 
 
-\subsubsection{Transconductance Amplifier as a Voltage Amplifier}
+\subsubsection{Transconductance Amplifier as a Voltage Amplifier}\label{sec:transamp_voltage}
 
 This will be a brief comment on the subject. There is more to know than what we'll discuss, but we are not required to know the details. The transconductance amplifier can be used as a differential input voltage amplifier, where essentially: $V_{out} = A(V_1 - V_2)$. A being the gain of the circuit, relating the change in output compared to the change in input. Here is the transfer function, which uses some of our previously derived knowledge on transconductance and output conductance: 
 

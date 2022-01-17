@@ -5,7 +5,7 @@ software, or hardware) that reports only the response of the cell that has the s
 
 ADD FIGURE OF RESPONSE OF WTA
 
-\paragraph{What's the biological basis behind Winner Take All?} It really is believed that populations of neurons do some kind of selective amplification to the braod range of input signals that they receive. Imagine you're at a loud cocktail party and there is a lot of noise but you suddenly hear your name being said, your brain will instantly cancel out everything else but the origin of the sound that you recognized as your name (localization and pitch/frequency of the voice). This is just one example. Anyways, in general, these circuits are typically used to implement and model competitive mechanisms among population of neurons. In this section we will = analyze a class of WTA networks that emulate biological networks, consisting of a cluster of excitatory neurons that innervate a global feedback inhibitory neuron.
+\paragraph{What's the biological basis behind Winner Take All?} It really is believed that populations of neurons do some kind of selective amplification to the broad range of input signals that they receive. Imagine you're at a loud cocktail party and there is a lot of noise but you suddenly hear your name being said, your brain will instantly cancel out everything else but the origin of the sound that you recognized as your name (localization and pitch/frequency of the voice). This is just one example. Anyways, in general, these circuits are typically used to implement and model competitive mechanisms among population of neurons. In this section we will analyze a class of WTA networks that emulate biological networks, consisting of a cluster of excitatory neurons that innervate a global feedback inhibitory neuron.
 
 
 \begin{figure}[H]
@@ -15,14 +15,14 @@ ADD FIGURE OF RESPONSE OF WTA
     \label{fig:Winner_Take_All}
 \end{figure}
 
-The circuit of Fig. \ref{fig:Winner_Take_All} is a continuous time, analog circuit that implements a WTA network. It processes all the (continuous-time) input signals in parallel, using only two transistors per input cell, and one global transistor that is common to all cells. Collective computation and global connectivity is obtained using one single node common to all cell. As can be seen in Fig. \ref{fig:Winner_Take_All}, each cell is built out of a current conveyor. The WTA network is modular and can be extended to N cells, by connecting additional cells to the node $V_c$. Input currents are applied to the network through current sources which are implemented for example using subthreshold pFETs. There are three conditions that determine the functionning of this WTA circuit, and we'll look at each of them individually. 
+The circuit of Fig. \ref{fig:Winner_Take_All} is a continuous time, analog circuit that implements a WTA network. It processes all the (continuous-time) input signals in parallel, using only two transistors per input cell, and one global transistor that is common to all cells. Collective computation and global connectivity is obtained using one single node common to all cells. As can be seen in Fig. \ref{fig:Winner_Take_All}, each cell is built out of a current conveyor. The WTA network is modular and can be extended to N cells, by connecting additional cells to the node $V_c$. Input currents are applied to the network through current sources which are implemented for example using subthreshold pFETs. There are three conditions that determine the functionning of this WTA circuit, and we'll look at each of them individually. 
 
 \subsubsection{$I_{in_1} = I_{in_2} = I_{in}$}
 
 You should intuitively see (also from the previous normalizer circuit) that when $I_{in_1} = I_{in_2}$, $I_{out_1} = I_{out_2} = I_b/2$. Let's see how that works formally. First, from the current conveyor, we established that $V_c \propto \mathrm{ln}(I_{in})$, which if written formally gives: 
 
 \begin{equation}
-    V_c = \frac{U_T}{\kappa}\mathrm{ln}(\frac{I_{in_1}}{I_0}
+    V_c = \frac{U_T}{\kappa}\mathrm{ln}(\frac{I_{in_1}}{I_0})
 \end{equation}
 
 Because $I_{in_1} = I_{in_2}$, it follows that $V_d_1 = V_d_2$, which yields that $I_{out_1} = I_{out_2} = I_b/2$. As simple as that. 
@@ -31,7 +31,7 @@ Because $I_{in_1} = I_{in_2}$, it follows that $V_d_1 = V_d_2$, which yields tha
 To remember: 
 
 \begin{itemize}
-    \item $V_c = \frac{U_t}{\kappa}ln(\frac{I_{in}}{I_0}$
+    \item $V_c = \frac{U_t}{\kappa}ln(\frac{I_{in}}{I_0})$
     \item $I_{out}_1 = I_{out}_2 = I_b$
     \item $V_d_1 = V_d_2 \approx V_c + V_b$
 \end{itemize}
@@ -42,7 +42,7 @@ To remember:
 This is a bit trickier. We first need to recall from Chapter 2 and 3 that the subthreshold current flowing through a transistor can be divided into a \textit{forward} component, $I_f$ and a \textit{reverse} component, $I_r$. When the transistor’s source voltage $Vs$ is approximately equal to its drain voltage $Vd$ (so when we are in the Ohmic region), $I_r$ becomes comparable to $I_f$. Now let's just keep this property in mind and look at the circuit for the case where $I_{in_1} \gg I_{in_2}$.
 
 When $I_{in_1} \gg I_{in_2}$, if the drain voltage of $M_1$ is in saturation, the dominant component of its drain current will be in the forward direction and its gate voltage $V_c$ will increase such that $I_d_1 = I_f_1 = I_0e^{\kappa V_c/U_T} = I_{in_1}$.  Although the two input currents $I_{in_1}$ and $I_{in_2}$ are different, the forward component of the drain currents of M1 and M2 are equal ($I_{f_1}= I_{f_2}$) because the two transistors
-have a common gate voltage $V_c$, and both their sources are tied to ground. The drain current $I_d_2$ of transistor M2 can only be equal to the input current $I_in_2$ under the following conditions:
+have a common gate voltage $V_c$, and both their sources are tied to ground. The drain current $I_d_2$ of transistor M2 can only be equal to the input current $I_{in_2}$ under the following conditions:
 
 \begin{equation}
     I_f_2 - I_r_2 = I_{in_2}
@@ -61,7 +61,7 @@ $M3$ sources all the bias current ($I_{out_1} = Ib$), with $V_d_1$ satisfying th
 To remember: 
 
 \begin{itemize}
-    \item $V_c = \frac{U_t}{\kappa}ln(\frac{I_{in}_1}{I_0}$
+    \item $V_c = \frac{U_t}{\kappa}ln(\frac{I_{in}_1}{I_0})$
     \item $I_{out}_1 = I_b; \ I_{out}_2 = 0$
     \item $V_d_1 = V_c + V_b$
     \item $V_d_2 \approx 0$
@@ -78,7 +78,7 @@ To analyze the circuit in this regime, we must consider the Early effect of the 
 \end{equation}
 where $V_e$ is the early voltage. 
 
-Assume that the two input currents $I_{in_1}$ and $I_{in_2}$ are initially equal. In this case, the transistors $M_1$ and $M_2$ operate in saturation region: the output voltages $V_d_1$ and $V_d_2$ will settle to a common value and the output currents $I_{out_1}$ and $I_{out_2}$ are both equal to $I_b/2$ as established previously. If we now increase the input current $I_{in_1}$ by a small amount $delta_I$ and apply the previous equation to transistor $M_1$, then the drain voltage $V_d_1$ increases by: 
+Assume that the two input currents $I_{in_1}$ and $I_{in_2}$ are initially equal. In this case, the transistors $M_1$ and $M_2$ operate in saturation region: the output voltages $V_d_1$ and $V_d_2$ will settle to a common value and the output currents $I_{out_1}$ and $I_{out_2}$ are both equal to $I_b/2$ as established previously. If we now increase the input current $I_{in_1}$ by a small amount $\delta_I$ and apply the previous equation to transistor $M_1$, then the drain voltage $V_d_1$ increases by: 
 
 \begin{equation}
     \delta V = \frac{\delta I}{I_{sat}}V_e
@@ -86,7 +86,7 @@ Assume that the two input currents $I_{in_1}$ and $I_{in_2}$ are initially equal
 
 As $V_d_1$ is also the gate voltage of transistor $M_3$, the $I_{out_1}$ will be amplified by an amount proportional to $e^{\delta V}$. The constraint of Kirchoff's current law imposes that $I_{out_2}$ decreases by the same amount in steady state. This reduction means that gate voltage $V_d_2$ of $M_4$ must decrease by $\delta V$. 
 
-The gain of the competition mechanism $\frac{\delta V}{\detla I}$ in the small signal regime is directly proportional to the Early voltage and inversely proportional to $I_sat$. The Early voltage depends on the geometry of the transistors and is fixed at design time. On the other hand $I_sat$ depends on $V_c$, which changes with the amplitude of the input currents. 
+The gain of the competition mechanism $\frac{\delta V}{\detla I}$ in the small signal regime is directly proportional to the Early voltage and inversely proportional to $I_{sat}$. The Early voltage depends on the geometry of the transistors and is fixed at design time. On the other hand $I_{sat}$ depends on $V_c$, which changes with the amplitude of the input currents. 
 
 To remember: 
 

@@ -3,7 +3,7 @@
 In the following, we will turn to some slightly more complex circuits in order to introduce the principles of the transconductance amplifier, which is used in a variety of circuit configurations in analog circuit design.
 
 \subsubsection{The differential pair}
-
+\label{section:diffpair}
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.85\linewidth]{../../Figures/Differential_Pair.PNG}
@@ -11,7 +11,7 @@ In the following, we will turn to some slightly more complex circuits in order t
     \label{fig:Differential_Pair}
 \end{figure}
 
-The differential pair has the same basic structure as the source follower, except that the current source, also called the \textit{bias current} $I_b$ is now shared by two MOSFETs $M_1$ and $M_2$ whose sources are connected to the drain of the bias MOSFET $M_b$. he sharing of the current between $M_1$ and $M_2$ depends on their respective gate voltages $V_2$ and $V_2$. If all MOSFETs are operated below threshold and in saturation and we assume that $M_1$ and $M_2$ have the same subthreshold slope factor $\kappa_n$, we obtain the following equations (assuming all transistors work in saturatio):
+The differential pair has the same basic structure as the source follower, except that the current source, also called the \textit{bias current} $I_b$ is now shared by two MOSFETs $M_1$ and $M_2$ whose sources are connected to the drain of the bias MOSFET $M_b$. The sharing of the current between $M_1$ and $M_2$ depends on their respective gate voltages $V_1$ and $V_2$. If all MOSFETs are operated below threshold and in saturation and we assume that $M_1$ and $M_2$ have the same subthreshold slope factor $\kappa_n$, we obtain the following equations (assuming all transistors work in saturatio):
 
 \begin{equation}
     I_1 = I_0 e^{\frac{\kappa V_1 - V_S}{U_T}}
@@ -52,6 +52,7 @@ The dependence of these two currents on the difference of the two input voltages
 
 \newpage
 \subsubsection{The current correlator}
+\label{section:currentcorrelator}
 
 The current correlator measures the correlation between unidirectional input currents, whereas the bump circuit (which we'll look at just after that) measures the similarity or dissimilarity of input voltages. Both of these circuits have been used in many aVLSI designs. For example, these circuits have been used in a stereoscopic vision system
 (Mahowald, 1994) to disambiguate between real and false targets. Both circuits are extensively discussed in Tobi's 1993 paper \cite{delbrueck1993bump}
@@ -60,17 +61,17 @@ The current correlator measures the correlation between unidirectional input cur
     \centering
     \includegraphics[width=0.5\linewidth]{../../Figures/Current_Correlator.PNG}
     \caption{Current Correlator. Adapted from textbook.}
-    \label{fig:basalandcerebellum}
+    \label{fig:current_correlator}
 \end{figure}
 
 Carver Mead recognized that in subthreshold operation, the current-correlator circuit
-in Figure 15 computes a measure of the correlation between its two input current $I_1$ and $I_2$. Intuitively, the series-connected transistors perform an analog logic \textbf{AND} like computation. If either of the gate voltages on these series connected transistors is low, then the output current is shut off. Conversely, if both of the input voltages are high, then the output current is large. In the intermediate regions, the circuit computes an approximation to the product of the input currents. Some important details: $M_1$ is in the Ohmic region, and $M_2$ is in saturation. We can thus derive the equations of function for this circuit: As $M_1$ and $M_2$ are connected in series, the same current $I_out$ flows  through them. 
+in Figure \ref{fig:current_correlator} computes a measure of the correlation between its two input current $I_1$ and $I_2$. Intuitively, the series-connected transistors perform an analog logic \textbf{AND} like computation. If either of the gate voltages on these series connected transistors is low, then the output current is shut off. Conversely, if both of the input voltages are high, then the output current is large. In the intermediate regions, the circuit computes an approximation to the product of the input currents. Some important details: $M_1$ is in the Ohmic region, and $M_2$ is in saturation. We can thus derive the equations of function for this circuit: As $M_1$ and $M_2$ are connected in series, the same current $I_{out}$ flows through them. 
 
 \begin{equation}
-    For \ M_1: I_out = I_0e^{\kappa_n V_1/U_t}(e^{-V_S/U_T} - e^{-V/U_T}) = I_0e^{\kappa V_1}(1 - e^{-V}) \ as \ V_S = 0 
+    For \ M_1: I_{out} = I_0e^{\kappa_n V_1/U_T}(e^{-V_S/U_T} - e^{-V/U_T}) = I_0e^{\kappa V_1}(1 - e^{-V}) \ as \ V_S = 0 
 \end{equation}
 \begin{equation}
-    For \ M_2: I_out = I_0e^{\kappa_n \frac{V_2 - V}{U_T}} 
+    For \ M_2: I_{out} = I_0e^{\kappa_n \frac{V_2 - V}{U_T}} 
 \end{equation}
 For simplicity, let's ignore $U_T$ in the following equations which cancels out anyways. 
 We can factor the last equation as follows: 
@@ -85,11 +86,11 @@ From simple saturation equation, we can derive $I_1$ and $I_2$:
 After some tedious algebra and rearranging, we find back the elegant equation: 
 
 \begin{equation}
-    I_out = \frac{}{I_1 I_2}{I_1 + I_2}
-\end{equation}
+    I_{out} = \frac{I_1 I_2}{I_1 + I_2}
+\end{equation} 
 
 \subsubsection{The Bump-antibump circuit}
-
+\label{section:bumbantibumb}
 The bump anti bump circuit is a circuit pretty much invented by Tobi, that also aims at computing the similarity and difference between two input signals. While we do not need to know the details of the circuit, it is useful (and interesting) to describe qualitatively what computation this rather complex circuit does. 
 
 \begin{figure}[H]

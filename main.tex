@@ -1,4 +1,4 @@
-\documentclass[a4paper,10pt]{article}
+ \documentclass[a4paper,10pt]{article}
 \usepackage{subfiles}
 \usepackage{geometry}
 \geometry{margin=1.2in}
@@ -9,11 +9,15 @@
 \usepackage{cases}
 \usepackage{color}
 \usepackage{empheq}
+\usepackage{array}
+\usepackage{tabularx}
 \usepackage[english]{babel}
 \usepackage{enumerate}
 \usepackage{enumitem}
 \usepackage{epstopdf}
 \usepackage{pdfpages}
+\def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
+\let\endchangemargin=\endlist 
 \usepackage{xr}
 \usepackage{fancyhdr}
 \usepackage{float}
@@ -54,9 +58,13 @@ sorting=ynt
 \title{
 Neuromorphic Engineering 1\\
 Lecture notes from Fall 2021}
-\author{Authors:\\\\ 
+\author{Authors and Contributors:\\\\ 
 Lioba Schürmann\\
-Yassine Taoudi Benchekroun}
+Yassine Taoudi-Benchekroun \\
+Wencan Huang \\
+Pietro Bonazzi \\
+Marc Steiner \\
+}
 \date{December 2021}
 
 \begin{document}
@@ -66,21 +74,27 @@ Yassine Taoudi Benchekroun}
 \newpage
 \subfile{Preliminary Notes/Disclaimer.tex}
 \subfile{Preliminary Notes/Organisation.tex}
+\subfile{Preliminary Notes/Contribution.tex}
 \subfile{Preliminary Notes/Contact.tex}
 
 \newpage
 \tableofcontents
 
 \newpage
+\setcounter{section}{-1}
 \subfile{Chapters/Chapter 0: Fundamentals/Main Chapter 0.tex}
-\subfile{Chapters/Chapter 1: Introduction/Neuromorphic Engineering: History, objectives and challenges.tex}
+\subfile{Chapters/Chapter 1: Introduction/Main Chapter 1.tex}
 \subfile{Chapters/Chapter 2: The transistor/Main Chapter 2.tex}
 \subfile{Chapters/Chapter 3: Above and Below Threshold/Main Chapter 3.tex}
 \subfile{Chapters/Chapter 4: Static Circuits/Main Chapter 4.tex}
 \subfile{Chapters/Chapter 5: The Transconductance Amplifier/Main Chapter 5.tex}
 \subfile{Chapters/Chapter 6: Linear Systems/Main Chapter 6.tex}
 \subfile{Chapters/Chapter 7: Current Mode and Winner Take All/Main Chapter 7.tex}
-\subfile{Chapters/Chapter 8: Photosensors and Circuits/Main Chapter 8.tex}
+\newpage
+\subfile{Chapters/Chapter 8: Silicon Synapses/Main Chapter 8.tex}
+\subfile{Chapters/Chapter 9: Silicon Neurons/Main Chapter 9.tex}
+\subfile{Chapters/Chapter 10: Photosensors and Circuits/Main Chapter 10.tex}
+\subfile{Complementary Notes and Topics/Main Complementary Notes.tex}
 \subfile{Chapters/Appendix/Main_Appendix.tex}
 
 
