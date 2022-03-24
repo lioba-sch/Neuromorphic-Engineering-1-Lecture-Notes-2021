@@ -1,0 +1,25 @@
+\newpage
+\section{Static Circuits}
+In this chapter, elementary analog VLSI \footnote{VLSI stands for Very-Large-Scale-Integration} circuits are introduced. It is critical to be very comfortable with the dynamics of these circuits to understand the more complex circuits presented in the following chapters. They indeed are the building blocks of many complex circuits which will be encountered later. A few things to remember about the circuits presented here: 
+\begin{itemize}
+    \item Equivalent circuits are obtained by exchanging MOSFET types (from N-Type to P-Type) and reversing Voltage differences.
+    \item All circuits are derived in steady state. Steady state means that the circuit is in equilibrium where "transient" effects are no longer important. 
+    \item Unless explicitly stated, all transistors are assumed to be functioning subthreshold. All these circuits have very different dynamics when working above threshold, which is not the purpose of the course. 
+    \item Second order effects, such as the Early Effect, are neglected. So yes, a lot of what is derived here works quite differently in practice!
+    \item For simplicity, MOSFETs are assumed to have a unity width-to-length ratio. Because yes, remember that MOSFET dynamics are affected by their width to length ratio! 
+\end{itemize}
+
+Before starting this chapter, one should be fully familiar with the following concepts: 
+\begin{itemize}
+    \item Electrical Engineering Fundamentals explained in Chapter 0.
+    \item Intuition behind the function of the transistor and how the combination of gate, source and drain voltage yield different current dynamics. 
+    \item Basics principle and equation of transistor operation in subthreshold. 
+\end{itemize}
+
+\subfile{Single Transistor Circuits.tex}
+\subfile{Two Transistor Circuits.tex}
+\subfile{Multiple Transistor Circuits.tex}
+\subfile{Lab-04Static.tex}
+\subfile{Test Yourself.tex}
+
+
